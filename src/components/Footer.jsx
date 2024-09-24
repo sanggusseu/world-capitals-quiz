@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 bg-black w-full min-h-[100px]">
+    <footer className="fixed bottom-0 bg-gray-800 w-full min-h-[100px]">
       <ins
         className="kakao_ad_area"
         style={{ display: 'none' }}
