@@ -20,7 +20,7 @@ export default function Table() {
 
   return (
     <>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto mb-[100px]">
         <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
           <thead className="ltr:text-center rtl:text-center">
             <tr>
