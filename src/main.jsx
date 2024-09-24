@@ -7,6 +7,9 @@ import ExplorePage from './pages/ExplorePage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import QuizPage from './pages/QuizPage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>,
 );

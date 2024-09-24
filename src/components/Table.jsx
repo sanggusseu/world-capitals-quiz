@@ -1,37 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import TableData from './TableData';
 
 export default function Table() {
-  const [data, setData] = useState([]);
-
   const SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID;
   const API_KEY = import.meta.env.VITE_API_KEY;
   const RANGE = 'Sheet1';
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`,
-        );
+  const fetchData = async () => {
+    const response = await axios.get(
+      `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`,
+    );
 
-        const fetchedData = response.data.values.slice(1).map(row => ({
-          code: row[0],
-          country: row[1],
-          capital: row[2],
-        }));
-        setData(fetchedData);
-      } catch (error) {
-        console.error('Error fetching data from Google Sheets:', error);
-      }
-    };
+    return response.data.values.slice(1).map(row => ({
+      code: row[0],
+      country: row[1],
+      capital: row[2],
+    }));
+  };
 
-    fetchData();
-  }, [SPREADSHEET_ID, API_KEY, RANGE]);
+  const { data, error, isLoading } = useQuery({
+    queryKey: ['sheetData'],
+    queryFn: fetchData,
+    staleTime: Infinity,
+    cacheTime: Infinity,
+  });
 
-  if (data.length === 0) {
+  if (isLoading) {
     return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error fetching data: {error.message}</p>;
   }
 
   return (
