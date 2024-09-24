@@ -1,37 +1,21 @@
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 import TableData from './TableData';
+import jsonData from '/src/data/google-spread-sheets.json';
 
 export default function Table() {
-  const SPREADSHEET_ID = import.meta.env.VITE_SPREADSHEET_ID;
-  const API_KEY = import.meta.env.VITE_API_KEY;
-  const RANGE = 'Sheet1';
+  const [data, setData] = useState([]);
 
-  const fetchData = async () => {
-    const response = await axios.get(
-      `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/${RANGE}?key=${API_KEY}`,
-    );
-
-    return response.data.values.slice(1).map(row => ({
-      code: row[0],
-      country: row[1],
-      capital: row[2],
+  useEffect(() => {
+    const fetchedData = jsonData.map(item => ({
+      code: item.code,
+      country: item.country,
+      capital: item.capital,
     }));
-  };
+    setData(fetchedData);
+  }, []);
 
-  const { data, error, isLoading } = useQuery({
-    queryKey: ['sheetData'],
-    queryFn: fetchData,
-    staleTime: Infinity,
-    cacheTime: Infinity,
-  });
-
-  if (isLoading) {
+  if (data.length === 0) {
     return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Error fetching data: {error.message}</p>;
   }
 
   return (
