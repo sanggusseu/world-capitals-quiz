@@ -1,0 +1,987 @@
+[
+    {
+        "code": "GH",
+        "country": "가나",
+        "capital": "아크라"
+    },
+    {
+        "code": "GA",
+        "country": "가봉",
+        "capital": "리브르빌"
+    },
+    {
+        "code": "GY",
+        "country": "가이아나",
+        "capital": "조지타운"
+    },
+    {
+        "code": "GM",
+        "country": "감비아",
+        "capital": "반줄"
+    },
+    {
+        "code": "GT",
+        "country": "과테말라",
+        "capital": "과테말라시티"
+    },
+    {
+        "code": "VA",
+        "country": "교황청",
+        "capital": "바티칸"
+    },
+    {
+        "code": "GD",
+        "country": "그레나다",
+        "capital": "세인트 죠지스"
+    },
+    {
+        "code": "GR",
+        "country": "그리스",
+        "capital": "아테네"
+    },
+    {
+        "code": "GN",
+        "country": "기니",
+        "capital": "코나크리"
+    },
+    {
+        "code": "GW",
+        "country": "기니비사우",
+        "capital": "비사우"
+    },
+    {
+        "code": "NA",
+        "country": "나미비아",
+        "capital": "빈트훅"
+    },
+    {
+        "code": "NR",
+        "country": "나우루",
+        "capital": "야렌"
+    },
+    {
+        "code": "NG",
+        "country": "나이지리아",
+        "capital": "아부자"
+    },
+    {
+        "code": "SS",
+        "country": "남수단",
+        "capital": "주바"
+    },
+    {
+        "code": "ZA",
+        "country": "남아프리카공화국",
+        "capital": "프리토리아"
+    },
+    {
+        "code": "NL",
+        "country": "네덜란드",
+        "capital": "암스테르담"
+    },
+    {
+        "code": "NP",
+        "country": "네팔연방",
+        "capital": "카트만두"
+    },
+    {
+        "code": "NO",
+        "country": "노르웨이",
+        "capital": "오슬로"
+    },
+    {
+        "code": "NZ",
+        "country": "뉴질랜드",
+        "capital": "웰링턴"
+    },
+    {
+        "code": "NU",
+        "country": "니우에",
+        "capital": "알로피"
+    },
+    {
+        "code": "NE",
+        "country": "니제르",
+        "capital": "니아메"
+    },
+    {
+        "code": "NI",
+        "country": "니카라과",
+        "capital": "마나과"
+    },
+    {
+        "code": "TW",
+        "country": "대만",
+        "capital": "타이베이"
+    },
+    {
+        "code": "DK",
+        "country": "덴마크",
+        "capital": "코펜하겐"
+    },
+    {
+        "code": "DO",
+        "country": "도미니카공화국",
+        "capital": "산토도밍고"
+    },
+    {
+        "code": "DM",
+        "country": "도미니카연방",
+        "capital": "로조"
+    },
+    {
+        "code": "DE",
+        "country": "독일",
+        "capital": "베를린"
+    },
+    {
+        "code": "TL",
+        "country": "동티모르",
+        "capital": "딜리"
+    },
+    {
+        "code": "LA",
+        "country": "라오스",
+        "capital": "비엔티안"
+    },
+    {
+        "code": "LR",
+        "country": "라이베리아",
+        "capital": "몬로비아"
+    },
+    {
+        "code": "LV",
+        "country": "라트비아",
+        "capital": "리가"
+    },
+    {
+        "code": "RU",
+        "country": "러시아",
+        "capital": "모스크바"
+    },
+    {
+        "code": "LB",
+        "country": "레바논",
+        "capital": "베이루트"
+    },
+    {
+        "code": "LS",
+        "country": "레소토",
+        "capital": "마세루"
+    },
+    {
+        "code": "RO",
+        "country": "루마니아",
+        "capital": "부쿠레슈티"
+    },
+    {
+        "code": "LU",
+        "country": "룩셈부르크",
+        "capital": "룩셈부르크"
+    },
+    {
+        "code": "RW",
+        "country": "르완다",
+        "capital": "키갈리"
+    },
+    {
+        "code": "LY",
+        "country": "리비아",
+        "capital": "트리폴리"
+    },
+    {
+        "code": "LT",
+        "country": "리투아니아",
+        "capital": "빌니우스"
+    },
+    {
+        "code": "LI",
+        "country": "리히텐슈타인",
+        "capital": "파두츠"
+    },
+    {
+        "code": "MG",
+        "country": "마다가스카르",
+        "capital": "안타나나리보"
+    },
+    {
+        "code": "MH",
+        "country": "마셜제도",
+        "capital": "마주로"
+    },
+    {
+        "code": "FM",
+        "country": "마이크로네시아연방",
+        "capital": "팔리키르"
+    },
+    {
+        "code": "MW",
+        "country": "말라위",
+        "capital": "릴롱궤"
+    },
+    {
+        "code": "MY",
+        "country": "말레이시아",
+        "capital": "쿠알라룸푸르"
+    },
+    {
+        "code": "ML",
+        "country": "말리",
+        "capital": "바마코"
+    },
+    {
+        "code": "MX",
+        "country": "멕시코",
+        "capital": "멕시코 시티"
+    },
+    {
+        "code": "MC",
+        "country": "모나코",
+        "capital": "모나코"
+    },
+    {
+        "code": "MA",
+        "country": "모로코",
+        "capital": "라바트"
+    },
+    {
+        "code": "MU",
+        "country": "모리셔스",
+        "capital": "포트루이스"
+    },
+    {
+        "code": "MR",
+        "country": "모리타니아",
+        "capital": "누악쇼트"
+    },
+    {
+        "code": "MZ",
+        "country": "모잠비크",
+        "capital": "마푸투"
+    },
+    {
+        "code": "ME",
+        "country": "몬테네그로",
+        "capital": "포드고리챠"
+    },
+    {
+        "code": "MD",
+        "country": "몰도바",
+        "capital": "키시나우"
+    },
+    {
+        "code": "MV",
+        "country": "몰디브",
+        "capital": "말레"
+    },
+    {
+        "code": "MT",
+        "country": "몰타",
+        "capital": "발레타"
+    },
+    {
+        "code": "MN",
+        "country": "몽골",
+        "capital": "울란바타르"
+    },
+    {
+        "code": "MM",
+        "country": "미얀마",
+        "capital": "네피도"
+    },
+    {
+        "code": "US",
+        "country": "미합중국",
+        "capital": "워싱턴"
+    },
+    {
+        "code": "VU",
+        "country": "바누아투",
+        "capital": "포트빌라"
+    },
+    {
+        "code": "BH",
+        "country": "바레인",
+        "capital": "마나마"
+    },
+    {
+        "code": "BB",
+        "country": "바베이도스",
+        "capital": "브릿지타운"
+    },
+    {
+        "code": "BS",
+        "country": "바하마",
+        "capital": "낫소"
+    },
+    {
+        "code": "BD",
+        "country": "방글라데시",
+        "capital": "다카"
+    },
+    {
+        "code": "BJ",
+        "country": "베냉",
+        "capital": "포르토 노보"
+    },
+    {
+        "code": "VE",
+        "country": "베네수엘라볼리바르",
+        "capital": "카라카스"
+    },
+    {
+        "code": "VN",
+        "country": "베트남",
+        "capital": "하노이"
+    },
+    {
+        "code": "BE",
+        "country": "벨기에",
+        "capital": "브뤼셀"
+    },
+    {
+        "code": "BY",
+        "country": "벨라루스",
+        "capital": "민스크"
+    },
+    {
+        "code": "BZ",
+        "country": "벨리즈",
+        "capital": "벨모판"
+    },
+    {
+        "code": "BA",
+        "country": "보스니아헤르체고비나",
+        "capital": "사라예보"
+    },
+    {
+        "code": "BW",
+        "country": "보츠와나",
+        "capital": "가보로네"
+    },
+    {
+        "code": "BO",
+        "country": "볼리비아",
+        "capital": "라파스"
+    },
+    {
+        "code": "BI",
+        "country": "부룬디",
+        "capital": "기테가"
+    },
+    {
+        "code": "BF",
+        "country": "부르키나파소",
+        "capital": "와가두구"
+    },
+    {
+        "code": "BT",
+        "country": "부탄",
+        "capital": "팀푸"
+    },
+    {
+        "code": "MK",
+        "country": "북마케도니아",
+        "capital": "스코피예"
+    },
+    {
+        "code": "BG",
+        "country": "불가리아",
+        "capital": "소피아"
+    },
+    {
+        "code": "BR",
+        "country": "브라질",
+        "capital": "브라질리아"
+    },
+    {
+        "code": "BN",
+        "country": "브루나이",
+        "capital": "반다르스리브가완"
+    },
+    {
+        "code": "WS",
+        "country": "사모아",
+        "capital": "아피아"
+    },
+    {
+        "code": "SA",
+        "country": "사우디아라비아",
+        "capital": "리야드"
+    },
+    {
+        "code": "CY",
+        "country": "사이프러스",
+        "capital": "니코시아"
+    },
+    {
+        "code": "SM",
+        "country": "산마리노",
+        "capital": "산마리노"
+    },
+    {
+        "code": "ST",
+        "country": "상투메프린시페",
+        "capital": "상투메"
+    },
+    {
+        "code": "SN",
+        "country": "세네갈",
+        "capital": "다카르"
+    },
+    {
+        "code": "RS",
+        "country": "세르비아",
+        "capital": "베오그라드"
+    },
+    {
+        "code": "SC",
+        "country": "세이셸",
+        "capital": "빅토리아"
+    },
+    {
+        "code": "LC",
+        "country": "세인트루시아",
+        "capital": "캐스트리스"
+    },
+    {
+        "code": "VC",
+        "country": "세인트빈센트그레나딘",
+        "capital": "킹스타운"
+    },
+    {
+        "code": "KN",
+        "country": "세인트키츠네비스",
+        "capital": "바스테르"
+    },
+    {
+        "code": "SO",
+        "country": "소말리아",
+        "capital": "모가디슈"
+    },
+    {
+        "code": "SB",
+        "country": "솔로몬제도",
+        "capital": "호니아라"
+    },
+    {
+        "code": "SD",
+        "country": "수단",
+        "capital": "카르툼"
+    },
+    {
+        "code": "SR",
+        "country": "수리남",
+        "capital": "파라마리보"
+    },
+    {
+        "code": "LK",
+        "country": "스리랑카",
+        "capital": "콜롬보"
+    },
+    {
+        "code": "SE",
+        "country": "스웨덴",
+        "capital": "스톡홀름"
+    },
+    {
+        "code": "CH",
+        "country": "스위스",
+        "capital": "베른"
+    },
+    {
+        "code": "ES",
+        "country": "스페인",
+        "capital": "마드리드"
+    },
+    {
+        "code": "SK",
+        "country": "슬로바키아",
+        "capital": "브라티슬라바"
+    },
+    {
+        "code": "SI",
+        "country": "슬로베니아",
+        "capital": "류블랴나"
+    },
+    {
+        "code": "SY",
+        "country": "시리아",
+        "capital": "다마스커스"
+    },
+    {
+        "code": "SL",
+        "country": "시에라리온",
+        "capital": "프리타운"
+    },
+    {
+        "code": "SG",
+        "country": "싱가포르",
+        "capital": "싱가포르"
+    },
+    {
+        "code": "AE",
+        "country": "아랍에미리트",
+        "capital": "아부다비"
+    },
+    {
+        "code": "AM",
+        "country": "아르메니아",
+        "capital": "예레반"
+    },
+    {
+        "code": "AR",
+        "country": "아르헨티나",
+        "capital": "부에노스아이레스"
+    },
+    {
+        "code": "IS",
+        "country": "아이슬란드",
+        "capital": "레이캬비크"
+    },
+    {
+        "code": "HT",
+        "country": "아이티",
+        "capital": "포르토프랭스"
+    },
+    {
+        "code": "IE",
+        "country": "아일랜드",
+        "capital": "더블린"
+    },
+    {
+        "code": "AZ",
+        "country": "아제르바이잔",
+        "capital": "바쿠"
+    },
+    {
+        "code": "AF",
+        "country": "아프가니스탄",
+        "capital": "카불"
+    },
+    {
+        "code": "AD",
+        "country": "안도라",
+        "capital": "안도라라베야"
+    },
+    {
+        "code": "AL",
+        "country": "알바니아",
+        "capital": "티라나"
+    },
+    {
+        "code": "DZ",
+        "country": "알제리",
+        "capital": "알제"
+    },
+    {
+        "code": "AO",
+        "country": "앙골라",
+        "capital": "루안다"
+    },
+    {
+        "code": "AG",
+        "country": "앤티가바부다",
+        "capital": "세인트존스"
+    },
+    {
+        "code": "ER",
+        "country": "에리트레아",
+        "capital": "아스마라"
+    },
+    {
+        "code": "SZ",
+        "country": "에스와티니",
+        "capital": "음바바네"
+    },
+    {
+        "code": "EE",
+        "country": "에스토니아",
+        "capital": "탈린"
+    },
+    {
+        "code": "EC",
+        "country": "에콰도르",
+        "capital": "키토"
+    },
+    {
+        "code": "ET",
+        "country": "에티오피아",
+        "capital": "아디스아바바"
+    },
+    {
+        "code": "SV",
+        "country": "엘살바도르",
+        "capital": "산살바도르"
+    },
+    {
+        "code": "GB",
+        "country": "영국",
+        "capital": "런던"
+    },
+    {
+        "code": "YE",
+        "country": "예멘",
+        "capital": "사나"
+    },
+    {
+        "code": "OM",
+        "country": "오만",
+        "capital": "무스카트"
+    },
+    {
+        "code": "AT",
+        "country": "오스트리아",
+        "capital": "빈"
+    },
+    {
+        "code": "HN",
+        "country": "온두라스",
+        "capital": "테구시갈파"
+    },
+    {
+        "code": "JO",
+        "country": "요르단",
+        "capital": "암만"
+    },
+    {
+        "code": "UG",
+        "country": "우간다",
+        "capital": "캄팔라"
+    },
+    {
+        "code": "UY",
+        "country": "우루과이",
+        "capital": "몬테비데오"
+    },
+    {
+        "code": "UZ",
+        "country": "우즈베키스탄",
+        "capital": "타슈켄트"
+    },
+    {
+        "code": "UA",
+        "country": "우크라이나",
+        "capital": "키이우"
+    },
+    {
+        "code": "IQ",
+        "country": "이라크",
+        "capital": "바그다드"
+    },
+    {
+        "code": "IR",
+        "country": "이란",
+        "capital": "테헤란"
+    },
+    {
+        "code": "IL",
+        "country": "이스라엘",
+        "capital": "예루살렘"
+    },
+    {
+        "code": "EG",
+        "country": "이집트",
+        "capital": "카이로"
+    },
+    {
+        "code": "IT",
+        "country": "이탈리아",
+        "capital": "로마"
+    },
+    {
+        "code": "IN",
+        "country": "인도",
+        "capital": "뉴델리"
+    },
+    {
+        "code": "ID",
+        "country": "인도네시아",
+        "capital": "자카르타"
+    },
+    {
+        "code": "JP",
+        "country": "일본",
+        "capital": "도쿄"
+    },
+    {
+        "code": "JM",
+        "country": "자메이카",
+        "capital": "킹스턴"
+    },
+    {
+        "code": "ZM",
+        "country": "잠비아",
+        "capital": "루사카"
+    },
+    {
+        "code": "GQ",
+        "country": "적도기니",
+        "capital": "말라보"
+    },
+    {
+        "code": "GE",
+        "country": "조지아",
+        "capital": "트빌리시"
+    },
+    {
+        "code": "CN",
+        "country": "중국",
+        "capital": "북경"
+    },
+    {
+        "code": "CF",
+        "country": "중앙아프리카",
+        "capital": "방기"
+    },
+    {
+        "code": "DJ",
+        "country": "지부티",
+        "capital": "지부티"
+    },
+    {
+        "code": "ZW",
+        "country": "짐바브웨",
+        "capital": "하라레"
+    },
+    {
+        "code": "TD",
+        "country": "차드",
+        "capital": "은자메나"
+    },
+    {
+        "code": "CZ",
+        "country": "체코",
+        "capital": "프라하"
+    },
+    {
+        "code": "CL",
+        "country": "칠레",
+        "capital": "산티아고"
+    },
+    {
+        "code": "CM",
+        "country": "카메룬",
+        "capital": "야운데"
+    },
+    {
+        "code": "CV",
+        "country": "카보베르데",
+        "capital": "프라야"
+    },
+    {
+        "code": "KZ",
+        "country": "카자흐스탄",
+        "capital": "누르술탄"
+    },
+    {
+        "code": "QA",
+        "country": "카타르",
+        "capital": "도하"
+    },
+    {
+        "code": "KH",
+        "country": "캄보디아",
+        "capital": "프놈펜"
+    },
+    {
+        "code": "CA",
+        "country": "캐나다",
+        "capital": "오타와"
+    },
+    {
+        "code": "KE",
+        "country": "케냐",
+        "capital": "나이로비"
+    },
+    {
+        "code": "KM",
+        "country": "코모로",
+        "capital": "모로니"
+    },
+    {
+        "code": "XK",
+        "country": "코소보",
+        "capital": "프리슈티나"
+    },
+    {
+        "code": "CR",
+        "country": "코스타리카",
+        "capital": "산호세"
+    },
+    {
+        "code": "CI",
+        "country": "코트디부아르",
+        "capital": "야무수크로"
+    },
+    {
+        "code": "CO",
+        "country": "콜롬비아",
+        "capital": "보고타"
+    },
+    {
+        "code": "CG",
+        "country": "콩고",
+        "capital": "브라자빌"
+    },
+    {
+        "code": "CD",
+        "country": "콩고민주공화국",
+        "capital": "킨샤사"
+    },
+    {
+        "code": "CU",
+        "country": "쿠바",
+        "capital": "아바나"
+    },
+    {
+        "code": "KW",
+        "country": "쿠웨이트",
+        "capital": "쿠웨이트시"
+    },
+    {
+        "code": "CK",
+        "country": "쿡제도",
+        "capital": "아바루아"
+    },
+    {
+        "code": "HR",
+        "country": "크로아티아",
+        "capital": "자그레브"
+    },
+    {
+        "code": "KG",
+        "country": "키르기스스탄",
+        "capital": "비슈케크"
+    },
+    {
+        "code": "KI",
+        "country": "키리바시",
+        "capital": "타라와"
+    },
+    {
+        "code": "TJ",
+        "country": "타지키스탄",
+        "capital": "두샨베"
+    },
+    {
+        "code": "TZ",
+        "country": "탄자니아",
+        "capital": "다레살람"
+    },
+    {
+        "code": "TH",
+        "country": "태국",
+        "capital": "방콕"
+    },
+    {
+        "code": "TG",
+        "country": "토고",
+        "capital": "로메"
+    },
+    {
+        "code": "TO",
+        "country": "통가",
+        "capital": "누쿠아로파"
+    },
+    {
+        "code": "TM",
+        "country": "투르크메니스탄",
+        "capital": "아시가바트"
+    },
+    {
+        "code": "TV",
+        "country": "투발루",
+        "capital": "푸나푸티"
+    },
+    {
+        "code": "TN",
+        "country": "튀니지",
+        "capital": "튀니스"
+    },
+    {
+        "code": "TR",
+        "country": "튀르키예공화국",
+        "capital": "앙카라"
+    },
+    {
+        "code": "TT",
+        "country": "트리니다드토바고",
+        "capital": "포트오브스페인"
+    },
+    {
+        "code": "PA",
+        "country": "파나마",
+        "capital": "파나마시티"
+    },
+    {
+        "code": "PY",
+        "country": "파라과이",
+        "capital": "아순시온"
+    },
+    {
+        "code": "PK",
+        "country": "파키스탄",
+        "capital": "이슬라마바드"
+    },
+    {
+        "code": "PG",
+        "country": "파푸아뉴기니",
+        "capital": "포트모르즈비"
+    },
+    {
+        "code": "PW",
+        "country": "팔라우",
+        "capital": "응게룰무드"
+    },
+    {
+        "code": "PS",
+        "country": "팔레스타인",
+        "capital": "라말라"
+    },
+    {
+        "code": "PE",
+        "country": "페루",
+        "capital": "리마"
+    },
+    {
+        "code": "PT",
+        "country": "포르투갈",
+        "capital": "리스본"
+    },
+    {
+        "code": "PL",
+        "country": "폴란드",
+        "capital": "바르샤바"
+    },
+    {
+        "code": "FR",
+        "country": "프랑스",
+        "capital": "파리"
+    },
+    {
+        "code": "FJ",
+        "country": "피지",
+        "capital": "수바"
+    },
+    {
+        "code": "FI",
+        "country": "핀란드",
+        "capital": "헬싱키"
+    },
+    {
+        "code": "PH",
+        "country": "필리핀",
+        "capital": "메트로마닐라"
+    },
+    {
+        "code": "HU",
+        "country": "헝가리",
+        "capital": "부다페스트"
+    },
+    {
+        "code": "AU",
+        "country": "호주",
+        "capital": "캔버라"
+    }
+]
