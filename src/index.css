@@ -5,3 +5,7 @@
 body {
   font-family: 'Noto Sans KR', system-ui;
 }
+
+.home-bg {
+  background: url('/src/assets/image/bg.jpg') center / auto 100% no-repeat;
+}
