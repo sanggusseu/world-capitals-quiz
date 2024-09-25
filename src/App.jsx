@@ -7,7 +7,7 @@ export default function App() {
     <div>
       <Header />
       <main>
-        <div className="mx-auto max-w-screen-xl mt-16 p-4 sm:p-6 lg:p-8">
+        <div className="mx-auto max-w-screen-xl mt-16 mb-[100px] p-4 sm:p-6 lg:p-8">
           <Outlet />
         </div>
       </main>
