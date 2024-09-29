@@ -10,24 +10,52 @@ export default function QuizPage() {
   const [answered, setAnswered] = useState(false);
 
   useEffect(() => {
-    const shuffled = [...data].sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 10);
-    const quizQuestions = selected.map(item => {
-      const options = [
-        item.capital,
-        ...shuffled
-          .filter(q => q.capital !== item.capital)
-          .slice(0, 3)
-          .map(q => q.capital),
-      ].sort(() => 0.5 - Math.random());
-      return {
-        country: item.country,
-        options,
-        correctAnswer: item.capital,
-      };
-    });
-    setQuestions(quizQuestions);
+    resetQuiz();
   }, []);
+
+  function makeQuestionsList() {
+    let questionsIndexes = makeQuestionsIndexes();
+    let answersIndexes = makeAnswersIndexes(questionsIndexes);
+
+    questionsIndexes = questionsIndexes.map(index => data[index]);
+    answersIndexes = answersIndexes.map(index => data[index]);
+    return [questionsIndexes, answersIndexes];
+  }
+
+  function shuffleOptions(options) {
+    let shuffledOptions = [...options];
+    let currentIndex = shuffledOptions.length - 1;
+    while (currentIndex > 0) {
+      let randomIndex = Math.floor(Math.random() * currentIndex + 1);
+      [shuffledOptions[currentIndex], shuffledOptions[randomIndex]] = [
+        shuffledOptions[randomIndex],
+        shuffledOptions[currentIndex],
+      ];
+
+      currentIndex--;
+    }
+    return shuffledOptions;
+  }
+
+  function makeQuestionsIndexes() {
+    const questionsIndexes = [];
+    while (questionsIndexes.length < 10) {
+      let index = Math.floor(Math.random() * data.length);
+      questionsIndexes.includes(index) || questionsIndexes.push(index);
+    }
+    return questionsIndexes;
+  }
+
+  function makeAnswersIndexes(questionsIndexes) {
+    const answersIndex = [];
+    while (answersIndex.length < 30) {
+      let index = Math.floor(Math.random() * data.length + 1);
+      questionsIndexes.includes(index) ||
+        answersIndex.includes(index) ||
+        answersIndex.push(index);
+    }
+    return answersIndex;
+  }
 
   const handleAnswer = answer => {
     if (!answered) {
@@ -55,6 +83,21 @@ export default function QuizPage() {
     setScore(0);
     setShowResult(false);
     setAnswered(false);
+
+    let [questionsList, answersList] = makeQuestionsList();
+    let options = [];
+    questionsList = questionsList.map((question, index) => {
+      options = [...answersList.slice(0, 3), questionsList[index]];
+      answersList = answersList.slice(3);
+      options = shuffleOptions(options);
+      return (question = {
+        ...question,
+        options,
+        correctAnswer: question.capital,
+      });
+    });
+
+    setQuestions([...questionsList]);
   };
 
   if (questions.length === 0) {
@@ -100,17 +143,17 @@ export default function QuizPage() {
           {currentQuestion.options.map((option, index) => (
             <button
               key={index}
-              onClick={() => handleAnswer(option)}
+              onClick={() => handleAnswer(option.capital)}
               className={`w-full p-4 text-left rounded ${
-                selectedAnswer === option
+                selectedAnswer === option.capital
                   ? selectedAnswer === currentQuestion.correctAnswer
                     ? 'bg-green-500 text-white'
                     : 'bg-red-500 text-white'
                   : 'bg-gray-200 hover:bg-gray-300'
-              } ${answered && option === currentQuestion.correctAnswer ? 'bg-green-500 text-white' : ''} transition duration-300`}
+              } ${answered && option.capital === currentQuestion.correctAnswer ? 'bg-green-500 text-white' : ''} transition duration-300`}
               disabled={answered}
             >
-              {option}
+              {option.capital}
             </button>
           ))}
         </div>
