@@ -22,20 +22,14 @@ export default function QuizPage() {
     return [questionsIndexes, answersIndexes];
   }
 
-  function shuffleOptions(options) {
-    let shuffledOptions = [...options];
-    let currentIndex = shuffledOptions.length - 1;
-    while (currentIndex > 0) {
-      let randomIndex = Math.floor(Math.random() * currentIndex + 1);
-      [shuffledOptions[currentIndex], shuffledOptions[randomIndex]] = [
-        shuffledOptions[randomIndex],
-        shuffledOptions[currentIndex],
-      ];
-
-      currentIndex--;
+  const shuffleArray = array => {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * arr.length);
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    return shuffledOptions;
-  }
+    return arr;
+  };
 
   function makeQuestionsIndexes() {
     const questionsIndexes = [];
@@ -89,7 +83,7 @@ export default function QuizPage() {
     questionsList = questionsList.map((question, index) => {
       options = [...answersList.slice(0, 3), questionsList[index]];
       answersList = answersList.slice(3);
-      options = shuffleOptions(options);
+      options = shuffleArray(options);
       return (question = {
         ...question,
         options,
