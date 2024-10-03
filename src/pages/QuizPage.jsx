@@ -25,16 +25,20 @@ export default function QuizPage() {
   const shuffleArray = array => {
     const arr = [...array];
     for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * arr.length);
+      const j = makeRandomIndex(arr);
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
   };
 
+  const makeRandomIndex = arr => {
+    return Math.floor(Math.random() * arr.length);
+  };
+
   function makeQuestionsIndexes() {
     const questionsIndexes = [];
     while (questionsIndexes.length < 10) {
-      let index = Math.floor(Math.random() * data.length);
+      let index = makeRandomIndex(data);
       questionsIndexes.includes(index) || questionsIndexes.push(index);
     }
     return questionsIndexes;
@@ -43,7 +47,7 @@ export default function QuizPage() {
   function makeAnswersIndexes(questionsIndexes) {
     const answersIndex = [];
     while (answersIndex.length < 30) {
-      let index = Math.floor(Math.random() * data.length);
+      let index = makeRandomIndex(data);
       questionsIndexes.includes(index) ||
         answersIndex.includes(index) ||
         answersIndex.push(index);
