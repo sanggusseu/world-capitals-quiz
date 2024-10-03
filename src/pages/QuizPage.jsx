@@ -89,6 +89,8 @@ export default function QuizPage() {
     setQuestions([...questionsList]);
   };
 
+  const currentQuestion = questions[currentQuestionIndex];
+
   if (questions.length === 0) {
     return (
       <div className="flex justify-center items-center h-[70vh]">
@@ -102,8 +104,6 @@ export default function QuizPage() {
       <Result count={questions.length} score={score} resetQuiz={resetQuiz} />
     );
   }
-
-  const currentQuestion = questions[currentQuestionIndex];
 
   return (
     <div className="flex flex-col items-center justify-center h-[70vh] bg-gray-100 p-4">
