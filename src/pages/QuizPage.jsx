@@ -14,8 +14,8 @@ export default function QuizPage() {
   }, []);
 
   function makeQuestionsList() {
-    let questionsIndexes = makeQuestionsIndexes();
-    let answersIndexes = makeAnswersIndexes(questionsIndexes);
+    let questionsIndexes = generateIndexes(10);
+    let answersIndexes = generateIndexes(30, questionsIndexes);
 
     questionsIndexes = questionsIndexes.map(index => data[index]);
     answersIndexes = answersIndexes.map(index => data[index]);
@@ -35,25 +35,15 @@ export default function QuizPage() {
     return Math.floor(Math.random() * arr.length);
   };
 
-  function makeQuestionsIndexes() {
-    const questionsIndexes = [];
-    while (questionsIndexes.length < 10) {
+  const generateIndexes = (count, exclude = []) => {
+    const indexes = new Set();
+    while (indexes.size < count) {
       let index = makeRandomIndex(data);
-      questionsIndexes.includes(index) || questionsIndexes.push(index);
+      if (exclude.includes(index)) continue;
+      indexes.add(index);
     }
-    return questionsIndexes;
-  }
-
-  function makeAnswersIndexes(questionsIndexes) {
-    const answersIndex = [];
-    while (answersIndex.length < 30) {
-      let index = makeRandomIndex(data);
-      questionsIndexes.includes(index) ||
-        answersIndex.includes(index) ||
-        answersIndex.push(index);
-    }
-    return answersIndex;
-  }
+    return Array.from(indexes);
+  };
 
   const handleAnswer = answer => {
     if (!answered) {
