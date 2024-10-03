@@ -43,7 +43,7 @@ export default function QuizPage() {
   function makeAnswersIndexes(questionsIndexes) {
     const answersIndex = [];
     while (answersIndex.length < 30) {
-      let index = Math.floor(Math.random() * data.length + 1);
+      let index = Math.floor(Math.random() * data.length);
       questionsIndexes.includes(index) ||
         answersIndex.includes(index) ||
         answersIndex.push(index);
