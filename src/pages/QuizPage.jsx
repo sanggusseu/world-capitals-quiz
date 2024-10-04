@@ -39,7 +39,7 @@ export default function QuizPage() {
   const generateIndexes = (count, exclude = []) => {
     const indexes = new Set();
     while (indexes.size < count) {
-      let index = makeRandomIndex(data);
+      const index = makeRandomIndex(data);
       if (exclude.includes(index)) continue;
       indexes.add(index);
     }
