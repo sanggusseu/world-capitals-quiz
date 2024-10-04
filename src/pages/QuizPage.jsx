@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useReducer } from 'react';
-import data from '/src/data/google-spread-sheets.json';
+import React, { useEffect, useReducer } from 'react';
 import Result from '../components/quizpage/Result';
 import quizReducer, { initialState } from '../reducer/quiz-reducer';
-import { generateIndexes, shuffleArray } from '../utils/quiz-utils';
+import { resetQuizLogic } from '../utils/quiz-logic';
 
 export default function QuizPage() {
   const [state, dispatch] = useReducer(quizReducer, initialState);
@@ -14,19 +13,11 @@ export default function QuizPage() {
     answered,
     selectedAnswer,
   } = state;
+  const currentQuestion = questions[currentQuestionIndex];
 
   useEffect(() => {
     resetQuiz();
   }, []);
-
-  const makeQuestionsList = () => {
-    const questionsIndexes = generateIndexes(data, 10);
-    const answersIndexes = generateIndexes(data, 30, questionsIndexes);
-
-    const questionsList = questionsIndexes.map(index => data[index]);
-    const answersList = answersIndexes.map(index => data[index]);
-    return [questionsList, answersList];
-  };
 
   const handleAnswer = answer => {
     if (!answered) {
@@ -46,25 +37,8 @@ export default function QuizPage() {
   };
 
   const resetQuiz = () => {
-    dispatch({ type: 'resetQuiz' });
-
-    let [questionsList, answersList] = makeQuestionsList();
-    let options = [];
-    questionsList = questionsList.map((question, index) => {
-      options = [...answersList.slice(0, 3), questionsList[index]];
-      answersList = answersList.slice(3);
-      options = shuffleArray(options);
-      return (question = {
-        ...question,
-        options,
-        correctAnswer: question.capital,
-      });
-    });
-
-    dispatch({ type: 'setQuestions', payload: [...questionsList] });
+    resetQuizLogic(dispatch);
   };
-
-  const currentQuestion = questions[currentQuestionIndex];
 
   if (questions.length === 0) {
     return (
