@@ -15,12 +15,12 @@ export default function QuizPage() {
   }, []);
 
   const makeQuestionsList = () => {
-    let questionsIndexes = generateIndexes(10);
-    let answersIndexes = generateIndexes(30, questionsIndexes);
+    const questionsIndexes = generateIndexes(10);
+    const answersIndexes = generateIndexes(30, questionsIndexes);
 
-    questionsIndexes = questionsIndexes.map(index => data[index]);
-    answersIndexes = answersIndexes.map(index => data[index]);
-    return [questionsIndexes, answersIndexes];
+    const questionsList = questionsIndexes.map(index => data[index]);
+    const answersList = answersIndexes.map(index => data[index]);
+    return [questionsList, answersList];
   };
 
   const shuffleArray = array => {
