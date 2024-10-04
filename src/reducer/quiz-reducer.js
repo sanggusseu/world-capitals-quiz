@@ -7,28 +7,31 @@ export const initialState = {
   answered: false,
 };
 
-export default function quizReducer(state, action) {
+export default function quizReducer(draft, action) {
   switch (action.type) {
     case 'setQuestions':
-      return { ...state, questions: action.payload };
+      draft.questions = action.payload;
+      break;
     case 'nextQuestion':
-      return {
-        ...state,
-        currentQuestionIndex: state.currentQuestionIndex + 1,
-        selectedAnswer: '',
-        answered: false,
-      };
+      ++draft.currentQuestionIndex;
+      draft.selectedAnswer = '';
+      draft.answered = false;
+      break;
     case 'incrementScore':
-      return { ...state, score: state.score + 1 };
+      ++draft.score;
+      break;
     case 'resetQuiz':
       return initialState;
     case 'showResult':
-      return { ...state, showResult: true };
+      draft.showResult = true;
+      break;
     case 'selectedAnswer': {
       const answer = action.payload;
-      return { ...state, selectedAnswer: answer, answered: true };
+      draft.selectedAnswer = answer;
+      draft.answered = true;
+      break;
     }
     default:
-      throw new Error('존재하지 않는 action 입니다.');
+      throw new Error(`${action.type}존재하지 않는 action 입니다.`);
   }
 }

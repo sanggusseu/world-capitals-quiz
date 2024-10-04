@@ -1,10 +1,11 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect } from 'react';
 import Result from '../components/quizpage/Result';
 import quizReducer, { initialState } from '../reducer/quiz-reducer';
 import { resetQuizLogic } from '../utils/quiz-logic';
+import { useImmerReducer } from 'use-immer';
 
 export default function QuizPage() {
-  const [state, dispatch] = useReducer(quizReducer, initialState);
+  const [state, dispatch] = useImmerReducer(quizReducer, initialState);
   const {
     questions,
     currentQuestionIndex,
