@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import data from '/src/data/google-spread-sheets.json';
 import Result from '../components/quizpage/Result';
+import quizReducer, { initialState } from '../reducer/quiz-reducer';
 
 export default function QuizPage() {
-  const [questions, setQuestions] = useState([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('');
-  const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [answered, setAnswered] = useState(false);
+  const [state, dispatch] = useReducer(quizReducer, initialState);
+  const {
+    questions,
+    currentQuestionIndex,
+    score,
+    showResult,
+    answered,
+    selectedAnswer,
+  } = state;
 
   useEffect(() => {
     resetQuiz();
@@ -48,30 +52,23 @@ export default function QuizPage() {
 
   const handleAnswer = answer => {
     if (!answered) {
-      setSelectedAnswer(answer);
-      setAnswered(true);
+      dispatch({ type: 'selectedAnswer', payload: answer });
       if (answer === questions[currentQuestionIndex].correctAnswer) {
-        setScore(score + 1);
+        dispatch({ type: 'incrementScore' });
       }
     }
   };
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedAnswer('');
-      setAnswered(false);
+      dispatch({ type: 'nextQuestion' });
     } else {
-      setShowResult(true);
+      dispatch({ type: 'showResult' });
     }
   };
 
   const resetQuiz = () => {
-    setCurrentQuestionIndex(0);
-    setSelectedAnswer('');
-    setScore(0);
-    setShowResult(false);
-    setAnswered(false);
+    dispatch({ type: 'resetQuiz' });
 
     let [questionsList, answersList] = makeQuestionsList();
     let options = [];
@@ -86,7 +83,7 @@ export default function QuizPage() {
       });
     });
 
-    setQuestions([...questionsList]);
+    dispatch({ type: 'setQuestions', payload: [...questionsList] });
   };
 
   const currentQuestion = questions[currentQuestionIndex];
