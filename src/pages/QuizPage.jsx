@@ -14,14 +14,14 @@ export default function QuizPage() {
     resetQuiz();
   }, []);
 
-  function makeQuestionsList() {
+  const makeQuestionsList = () => {
     let questionsIndexes = generateIndexes(10);
     let answersIndexes = generateIndexes(30, questionsIndexes);
 
     questionsIndexes = questionsIndexes.map(index => data[index]);
     answersIndexes = answersIndexes.map(index => data[index]);
     return [questionsIndexes, answersIndexes];
-  }
+  };
 
   const shuffleArray = array => {
     const arr = [...array];
