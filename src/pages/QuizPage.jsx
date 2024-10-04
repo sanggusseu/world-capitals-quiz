@@ -2,6 +2,7 @@ import React, { useState, useEffect, useReducer } from 'react';
 import data from '/src/data/google-spread-sheets.json';
 import Result from '../components/quizpage/Result';
 import quizReducer, { initialState } from '../reducer/quiz-reducer';
+import { generateIndexes, shuffleArray } from '../utils/quiz-utils';
 
 export default function QuizPage() {
   const [state, dispatch] = useReducer(quizReducer, initialState);
@@ -19,35 +20,12 @@ export default function QuizPage() {
   }, []);
 
   const makeQuestionsList = () => {
-    const questionsIndexes = generateIndexes(10);
-    const answersIndexes = generateIndexes(30, questionsIndexes);
+    const questionsIndexes = generateIndexes(data, 10);
+    const answersIndexes = generateIndexes(data, 30, questionsIndexes);
 
     const questionsList = questionsIndexes.map(index => data[index]);
     const answersList = answersIndexes.map(index => data[index]);
     return [questionsList, answersList];
-  };
-
-  const shuffleArray = array => {
-    const arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = makeRandomIndex(arr);
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  };
-
-  const makeRandomIndex = arr => {
-    return Math.floor(Math.random() * arr.length);
-  };
-
-  const generateIndexes = (count, exclude = []) => {
-    const indexes = new Set();
-    while (indexes.size < count) {
-      const index = makeRandomIndex(data);
-      if (exclude.includes(index)) continue;
-      indexes.add(index);
-    }
-    return Array.from(indexes);
   };
 
   const handleAnswer = answer => {
